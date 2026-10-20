@@ -260,9 +260,11 @@ button.ph:hover img{transform:scale(1.03)}
 .house p{margin:0;font-size:15.5px;line-height:1.55}
 .rooms{display:grid;grid-template-columns:repeat(4, 1fr);gap:16px}
 .room{display:flex;flex-direction:column;background:var(--card);border:1px solid var(--line);border-radius:18px;overflow:hidden}
-.room__art{position:relative;aspect-ratio:5/3.4;background:var(--sand) url(decor/lattice.svg);display:grid;place-items:center;color:var(--timber)}
-.room__art svg{width:66%;height:auto}
-.room__art .q-tag{position:absolute;left:12px;bottom:12px}
+.room__ph{display:grid;gap:4px;padding:4px 4px 0}
+.room__ph .ph{border-radius:12px}
+.room__main{aspect-ratio:3/2}
+.room__th{display:grid;grid-template-columns:1fr 1fr;gap:4px}
+.room__th .ph{aspect-ratio:3/2;border-radius:10px}
 .room__b{padding:18px 18px 20px;display:flex;flex-direction:column;flex:1}
 .room__lab{font:600 14px/1 var(--lab);letter-spacing:.2em;text-transform:uppercase;color:var(--timber);margin:0 0 8px}
 .room h3{font:700 22px/1.2 var(--disp);color:var(--ink);margin:0 0 8px}
@@ -284,6 +286,8 @@ button.ph:hover img{transform:scale(1.03)}
 .winter__ph{display:grid;grid-template-columns:1fr 1fr;gap:12px}
 .winter__ph .ph{aspect-ratio:3/4.2}
 .winter__ph .ph:nth-child(2){margin-top:46px}
+.winter__ph .ph--w{aspect-ratio:4/3}
+.winter__ph .ph--w:nth-child(4){margin-top:46px}
 .dist{list-style:none;margin:24px 0 0;padding:0}
 .dist li{display:grid;grid-template-columns:1fr auto;gap:14px;padding:13px 0;border-bottom:1px solid rgba(239,196,138,.22);font-size:16px}
 .dist b{font-weight:500;color:var(--honey);white-space:nowrap}
@@ -464,7 +468,7 @@ button.ph:hover img{transform:scale(1.03)}
 </svg>
 
 <header class="hdr" id="hdr">
-  <p class="proto"><b>Прототип сайту</b> садиби «У Сазанських» у Славську. Сайт налаштований під пошук Google і під відповіді ChatGPT та інших AI-помічників.<span class="proto__more"> Фото з Google-картки садиби, ціни й умови уточнюються в господарів.</span></p>
+  <p class="proto"><b>Прототип сайту</b> садиби «У Сазанських» у Славську. Сайт налаштований під пошук Google і під відповіді ChatGPT та інших AI-помічників.<span class="proto__more"> Фото з Google-картки і каталогу, ціни й умови уточнюються в господарів.</span></p>
   <div class="wrap hdr__in">
     <a class="logo" href="#top" aria-label="Садиба «У Сазанських», на початок">
       <svg aria-hidden="true"><use href="#i-logo"/></svg>
@@ -644,7 +648,7 @@ button.ph:hover img{transform:scale(1.03)}
       </div>
       <div class="rooms">
         <article class="room rv">
-          <div class="room__art"><svg aria-hidden="true"><use href="#i-roomart"/></svg><span class="q-tag">фото додамо</span></div>
+          <div class="room__ph"><button class="ph room__main" type="button" data-lb="img/n2-pivlyuks.webp" data-cap="Двомісний півлюкс"><img src="img/n2-pivlyuks-s.webp" alt="Світлий двомісний номер з великим ліжком і вікном" loading="lazy" width="760" height="506"></button><div class="room__th"><button class="ph" type="button" data-lb="img/n2-standart.webp" data-cap="Двомісний стандарт"><img src="img/n2-standart-s.webp" alt="Двомісний номер з ліжком, шафою і телевізором" loading="lazy" width="760" height="506"></button><button class="ph" type="button" data-lb="img/n2-standart-2.webp" data-cap="Двомісний номер під дерев'яною стелею"><img src="img/n2-standart-2-s.webp" alt="Номер з ліжком, телевізором і вікном" loading="lazy" width="760" height="506"></button></div></div>
           <div class="room__b">
             <p class="room__lab">Для двох</p>
             <h3>Номер на двох</h3>
@@ -655,7 +659,7 @@ button.ph:hover img{transform:scale(1.03)}
           </div>
         </article>
         <article class="room rv">
-          <div class="room__art"><svg aria-hidden="true"><use href="#i-roomart"/></svg><span class="q-tag">фото додамо</span></div>
+          <div class="room__ph"><button class="ph room__main" type="button" data-lb="img/n4-standart.webp" data-cap="Номер на чотирьох"><img src="img/n4-standart-s.webp" alt="Номер на чотирьох: двоспальне і окремі ліжка" loading="lazy" width="760" height="506"></button><div class="room__th"><button class="ph" type="button" data-lb="img/n4-standart-2.webp" data-cap="Номер на чотирьох"><img src="img/n4-standart-2-s.webp" alt="Номер з окремими ліжками і столиком" loading="lazy" width="760" height="506"></button><button class="ph" type="button" data-lb="img/n3-standart.webp" data-cap="Номер на трьох"><img src="img/n3-standart-s.webp" alt="Номер на трьох з ліжком і шафою" loading="lazy" width="760" height="506"></button></div></div>
           <div class="room__b">
             <p class="room__lab">Для родини</p>
             <h3>Номер на трьох або чотирьох</h3>
@@ -666,7 +670,7 @@ button.ph:hover img{transform:scale(1.03)}
           </div>
         </article>
         <article class="room rv">
-          <div class="room__art"><svg aria-hidden="true"><use href="#i-roomart"/></svg><span class="q-tag">фото додамо</span></div>
+          <div class="room__ph"><button class="ph room__main" type="button" data-lb="img/dk-spalnya.webp" data-cap="Двокімнатний півлюкс: спальня"><img src="img/dk-spalnya-s.webp" alt="Спальня двокімнатного півлюкса з лампами біля ліжка" loading="lazy" width="760" height="506"></button><div class="room__th"><button class="ph" type="button" data-lb="img/dk-vitalnya.webp" data-cap="Двокімнатний півлюкс: кімната з диваном"><img src="img/dk-vitalnya-s.webp" alt="Кімната з кутовим диваном, двері до спальні" loading="lazy" width="760" height="506"></button><button class="ph" type="button" data-lb="img/dk-balkon.webp" data-cap="Балкон номера"><img src="img/dk-balkon-s.webp" alt="Балкон з кріслами і столиком, видно гори" loading="lazy" width="760" height="506"></button></div></div>
           <div class="room__b">
             <p class="room__lab">Дві кімнати</p>
             <h3>Двокімнатний півлюкс</h3>
@@ -677,7 +681,7 @@ button.ph:hover img{transform:scale(1.03)}
           </div>
         </article>
         <article class="room rv">
-          <div class="room__art"><svg aria-hidden="true"><use href="#i-roomart"/></svg><span class="q-tag">фото додамо</span></div>
+          <div class="room__ph"><button class="ph room__main" type="button" data-lb="img/kh-spalnya.webp" data-cap="Номер з кухнею: спальня"><img src="img/kh-spalnya-s.webp" alt="Спальня з великим ліжком і лампами" loading="lazy" width="760" height="506"></button><div class="room__th"><button class="ph" type="button" data-lb="img/kh-kukhnya.webp" data-cap="Номер з кухнею: кухонний куток"><img src="img/kh-kukhnya-s.webp" alt="Кухонний куток з холодильником, мікрохвильовкою і чайником" loading="lazy" width="760" height="506"></button><button class="ph" type="button" data-lb="img/kh-kutok.webp" data-cap="Номер з кухнею: обідній куток"><img src="img/kh-kutok-s.webp" alt="Стіл, стільці й кутовий диван у номері" loading="lazy" width="760" height="506"></button></div></div>
           <div class="room__b">
             <p class="room__lab">Своя кухня</p>
             <h3>Окремий номер з кухнею</h3>
@@ -688,7 +692,7 @@ button.ph:hover img{transform:scale(1.03)}
           </div>
         </article>
       </div>
-      <div class="inroom rv"><svg class="i" aria-hidden="true"><use href="#i-bed"/></svg><p>Що є в номерах, за відгуками гостей: свіжа білосніжна постіль і рушники, фен, холодильник, чайник, мікрохвильовка й посуд.</p></div>
+      <div class="inroom rv"><svg class="i" aria-hidden="true"><use href="#i-bed"/></svg><p>Що є в номерах, за відгуками гостей: свіжа білосніжна постіль і рушники, фен, холодильник, чайник, мікрохвильовка й посуд. Фото номерів поки зі сторінки садиби в каталозі, у робочій версії поставимо свіжі.</p></div>
     </div>
   </section>
 
@@ -713,6 +717,8 @@ button.ph:hover img{transform:scale(1.03)}
       <div class="winter__ph">
         <button class="ph rv" type="button" data-lb="img/zyma-goidalka.webp" data-cap="Гойдалка під снігом"><img src="img/zyma-goidalka-s.webp" alt="Гойдалка у дворі під шапкою снігу, за нею будинок з дерева" loading="lazy" width="432" height="760"></button>
         <button class="ph rv" type="button" data-lb="img/zyma-yalynka.webp" data-cap="Ялинка з вогниками у дворі"><img src="img/zyma-yalynka-s.webp" alt="Засніжена ялинка з гірляндою вночі" loading="lazy" width="570" height="760"></button>
+        <button class="ph ph--w rv" type="button" data-lb="img/sushka.webp" data-cap="Сушка для лиж і спорядження"><img src="img/sushka-s.webp" alt="Кімната для сушіння лиж і сноубордів" loading="lazy" width="700" height="525"></button>
+        <button class="ph ph--w rv" type="button" data-lb="img/sauna.webp" data-cap="Кімната відпочинку в сауні"><img src="img/sauna-s.webp" alt="Кімната відпочинку з диванами біля басейну сауни" loading="lazy" width="760" height="506"></button>
       </div>
     </div>
   </section>
@@ -723,9 +729,10 @@ button.ph:hover img{transform:scale(1.03)}
         <svg class="kovka" aria-hidden="true"><use href="#i-kovka"/></svg>
         <p class="kick">Фото</p>
         <h2 class="h2">Як тут <em>насправді</em></h2>
-        <p class="lead" style="margin:0 auto">Знімки господарів і гостей з Google-картки садиби.</p>
+        <p class="lead" style="margin:0 auto">Знімки господарів і гостей з Google-картки садиби та зі сторінки садиби в каталозі.</p>
       </div>
       <div class="gal rv">
+        <button class="ph" type="button" data-lb="img/vyd-hory.webp" data-cap="Вид на гори з садиби"><img src="img/vyd-hory-s.webp" alt="Вид на Славсько і гору з лижною трасою" loading="lazy" width="760" height="506"></button>
         <button class="ph" type="button" data-lb="img/basein-kut.webp" data-cap="Басейн і навіс"><img src="img/basein-kut-s.webp" alt="Кут басейну, шезлонги і біла решітка" loading="lazy" width="760" height="568"></button>
         <button class="ph" type="button" data-lb="img/sad-goidalka-2.webp" data-cap="Гойдалка серед зелені"><img src="img/sad-goidalka-2-s.webp" alt="Кована гойдалка в саду серед ялівцю і туй" loading="lazy" width="570" height="760"></button>
         <button class="ph" type="button" data-lb="img/galyavyna-2.webp" data-cap="Лежаки на газоні"><img src="img/galyavyna-2-s.webp" alt="Лежаки на зеленому газоні, світлий будинок" loading="lazy" width="760" height="497"></button>
@@ -905,7 +912,7 @@ button.ph:hover img{transform:scale(1.03)}
         </ul>
       </div>
     </div>
-    <p class="foot__fine">Прототип сайту садиби «У Сазанських», зібраний з відкритих даних. Це ще не офіційний сайт. Фото: знімки господарів і гостей з Google-картки садиби, частина кадрів вирізана з її панорам. Відео на першому екрані настроєве, з безкоштовного стоку Pexels, це не зйомка садиби. Відгуки дослівні, з Google. Ціни, кількість місць і умови бронювання уточнюються з господарями. У робочій версії сайт налаштовується під пошук Google і під відповіді ChatGPT та інших AI-помічників, щоб садибу знаходили ті, хто шукає, де зупинитися в Славську.</p>
+    <p class="foot__fine">Прототип сайту садиби «У Сазанських», зібраний з відкритих даних. Це ще не офіційний сайт. Фото: знімки господарів і гостей з Google-картки садиби (частина кадрів вирізана з її панорам) і фото номерів зі сторінки садиби в каталозі karpaty-slav.com, зі знаком каталогу. Відео на першому екрані настроєве, з безкоштовного стоку Pexels, це не зйомка садиби. Відгуки дослівні, з Google. Ціни, кількість місць і умови бронювання уточнюються з господарями. У робочій версії сайт налаштовується під пошук Google і під відповіді ChatGPT та інших AI-помічників, щоб садибу знаходили ті, хто шукає, де зупинитися в Славську.</p>
   </div>
 </footer>
 
